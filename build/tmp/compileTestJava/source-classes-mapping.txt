@@ -1,0 +1,4 @@
+sungshin/sooon/SooonApplicationTests.java
+ sungshin.sooon.SooonApplicationTests
+sungshin/sooon/controller/PostControllerTest.java
+ sungshin.sooon.controller.PostControllerTest
