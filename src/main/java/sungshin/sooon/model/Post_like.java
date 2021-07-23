@@ -3,9 +3,7 @@ package sungshin.sooon.model;
 import lombok.*;
 import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -20,8 +18,12 @@ public class Post_like {
     @GeneratedValue
     private Long post_like_id;
 
-    private Long account_id;
+    @ManyToOne
+    @JoinColumn(name="account_id")
+    private Account account;
 
-    private Long post_id;
+    @ManyToOne
+    @JoinColumn(name="post_id")
+    private Post post;
 
 }

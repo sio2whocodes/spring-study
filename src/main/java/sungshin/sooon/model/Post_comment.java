@@ -3,9 +3,7 @@ package sungshin.sooon.model;
 import lombok.*;
 import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -23,9 +21,13 @@ public class Post_comment {
 
     private String comment;
 
-    private Long account_id;
+    @ManyToOne
+    @JoinColumn(name="account_id")
+    private Account account;
 
-    private Long post_id;
+    @ManyToOne
+    @JoinColumn(name="post_id")
+    private Post post;
 
     private Long order_num;
 

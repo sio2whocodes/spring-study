@@ -3,9 +3,7 @@ package sungshin.sooon.model;
 import lombok.*;
 import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -25,7 +23,9 @@ public class Post {
 
     private String content;
 
-    private long account_id;
+    @ManyToOne
+    @JoinColumn(name="account_id")
+    private Account account;
 
     private boolean is_anonymous;
 
