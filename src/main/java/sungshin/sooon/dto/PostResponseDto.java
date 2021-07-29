@@ -1,26 +1,31 @@
 package sungshin.sooon.dto;
 
-import lombok.Getter;
-import sungshin.sooon.model.Account;
-import sungshin.sooon.model.Post;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class PostResponseDto {
-    private Long post_id;
+    private Long id;
     private String title;
     private String content;
     private Account account;
     private Boolean is_anonymous;
     private LocalDateTime created_at;
 
-    public PostResponseDto(Post post) {
-        this.post_id = post.getPost_id();
-        this.title = post.getTitle();
-        this.content = post.getContent();
-        this.account = post.getAccount();
-        this.is_anonymous = post.is_anonymous();
-        this.created_at = post.getCreated_at();
+    public static PostResponseDto of(Post post){
+        return PostResponseDto.builder()
+                .id(post.getId())
+                .title(post.getTitle())
+                .content(post.getContent())
+                .account(post.getAccount())
+                .is_anonymous(post.is_anonymous())
+                .created_at(post.getCreated_at())
+                .build();
     }
+
 }

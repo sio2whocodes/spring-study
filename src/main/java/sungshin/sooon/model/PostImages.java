@@ -7,13 +7,12 @@ import javax.persistence.*;
 
 @Entity
 @Getter
-@Setter
 @EqualsAndHashCode(of = "post_images_id")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @DynamicUpdate
-public class Post_images {
+public class PostImages {
     @Id
     @GeneratedValue
     private Long post_images_id;
