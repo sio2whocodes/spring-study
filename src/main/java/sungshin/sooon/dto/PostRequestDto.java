@@ -3,6 +3,7 @@ package sungshin.sooon.dto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import sungshin.sooon.model.Post;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

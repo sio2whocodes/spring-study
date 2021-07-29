@@ -2,6 +2,7 @@ package sungshin.sooon.dto;
 
 import lombok.Builder;
 import lombok.Data;
+import sungshin.sooon.model.Account;
 
 @Data
 @Builder
