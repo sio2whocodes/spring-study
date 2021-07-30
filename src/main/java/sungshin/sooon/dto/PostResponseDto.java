@@ -1,8 +1,8 @@
 package sungshin.sooon.dto;
 
 import lombok.*;
-import sungshin.sooon.model.Account;
-import sungshin.sooon.model.Post;
+import sungshin.sooon.domain.account.Account;
+import sungshin.sooon.domain.post.Post;
 
 import java.time.LocalDateTime;
 

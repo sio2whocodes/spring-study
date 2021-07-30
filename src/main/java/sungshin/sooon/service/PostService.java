@@ -6,17 +6,14 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import sungshin.sooon.dto.PostCommentRequestDto;
-import sungshin.sooon.dto.PostCommentResponseDto;
-import sungshin.sooon.dto.PostRequestDto;
-import sungshin.sooon.dto.PostResponseDto;
-import sungshin.sooon.model.Account;
-import sungshin.sooon.model.Post;
-import sungshin.sooon.model.PostComment;
-import sungshin.sooon.model.PostLike;
-import sungshin.sooon.repository.PostCommentRepository;
-import sungshin.sooon.repository.PostLikeRepository;
-import sungshin.sooon.repository.PostRepository;
+import sungshin.sooon.dto.*;
+import sungshin.sooon.domain.account.Account;
+import sungshin.sooon.domain.post.Post;
+import sungshin.sooon.domain.post.PostComment;
+import sungshin.sooon.domain.post.PostLike;
+import sungshin.sooon.domain.post.PostCommentRepository;
+import sungshin.sooon.domain.post.PostLikeRepository;
+import sungshin.sooon.domain.post.PostRepository;
 
 import java.util.List;
 
@@ -79,7 +76,7 @@ public class PostService {
                 .orElseThrow(()->new IllegalArgumentException("["+postId+"] 해당 게시글이 없습니다."));
 
         PostLike like = PostLike.builder().post(post).account(account).build();
-        return postLikeRepository.save(like).getPost_like_id();
+        return postLikeRepository.save(like).getId();
     }
 
     @Transactional

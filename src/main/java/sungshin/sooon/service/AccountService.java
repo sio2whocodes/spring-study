@@ -19,11 +19,11 @@ import sungshin.sooon.dto.AccountResponseDto;
 import sungshin.sooon.dto.LoginRequestDto;
 import sungshin.sooon.dto.RegisterRequestDto;
 import sungshin.sooon.dto.TokenDto;
-import sungshin.sooon.model.Account;
-import sungshin.sooon.model.RefreshToken;
-import sungshin.sooon.model.UserAccount;
-import sungshin.sooon.repository.AccountRepository;
-import sungshin.sooon.repository.RefreshTokenRepository;
+import sungshin.sooon.domain.account.Account;
+import sungshin.sooon.domain.account.RefreshToken;
+import sungshin.sooon.domain.account.UserAccount;
+import sungshin.sooon.domain.account.AccountRepository;
+import sungshin.sooon.domain.account.RefreshTokenRepository;
 import sungshin.sooon.util.SecurityUtil;
 
 import javax.validation.Valid;
@@ -70,6 +70,7 @@ public class AccountService implements UserDetailsService {
 
         // 3. 인증 정보를 기반으로 JWT 토큰 생성
         TokenDto tokenDto = tokenProvider.generateTokenDto(authentication);
+
         // 4. RefreshToken 저장
         RefreshToken refreshToken = RefreshToken.builder()
                 .email(authentication.getName())

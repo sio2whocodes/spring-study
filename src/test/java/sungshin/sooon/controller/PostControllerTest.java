@@ -7,6 +7,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import sungshin.sooon.dto.PostRequestDto;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -20,21 +21,15 @@ public class PostControllerTest {
     @Autowired
     ObjectMapper objectMapper;
 
-    @Autowired
-    PostController postController;
-
     @Test
     public void create_post() throws Exception{
         //given
         String title = "수정광산에 오신걸";
         String content = "환영합니다!";
-        Long user_id = 1L;
-        boolean is_anonymous = true;
-        PostCreateRequestDto dto = PostCreateRequestDto.builder()
+        PostRequestDto dto = PostRequestDto.builder()
                 .title(title)
                 .content(content)
-                .user_id(user_id)
-                .is_anonymous(is_anonymous)
+                .is_anonymous(true)
                 .build();
 
         //when

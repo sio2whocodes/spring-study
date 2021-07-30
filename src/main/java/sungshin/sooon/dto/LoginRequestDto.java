@@ -1,14 +1,11 @@
 package sungshin.sooon.dto;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import sungshin.sooon.model.Account;
+import sungshin.sooon.domain.account.Account;
 
-
-@Getter @Setter
+@Getter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class LoginRequestDto {

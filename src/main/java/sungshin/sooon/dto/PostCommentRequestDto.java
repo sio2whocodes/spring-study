@@ -1,10 +1,7 @@
 package sungshin.sooon.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import sungshin.sooon.model.PostComment;
+import lombok.*;
+import sungshin.sooon.domain.post.PostComment;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

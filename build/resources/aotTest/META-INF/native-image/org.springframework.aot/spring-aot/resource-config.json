@@ -1352,37 +1352,10 @@
         "pattern": "sungshin/sooon/controller/AccountController.class"
       },
       {
-        "pattern": "sungshin/sooon/controller/PostController.class"
-      },
-      {
         "pattern": "sungshin/sooon/model/Account$AccountBuilder.class"
       },
       {
         "pattern": "sungshin/sooon/model/Account.class"
-      },
-      {
-        "pattern": "sungshin/sooon/model/Post$PostBuilder.class"
-      },
-      {
-        "pattern": "sungshin/sooon/model/Post.class"
-      },
-      {
-        "pattern": "sungshin/sooon/model/Post_comment$Post_commentBuilder.class"
-      },
-      {
-        "pattern": "sungshin/sooon/model/Post_comment.class"
-      },
-      {
-        "pattern": "sungshin/sooon/model/Post_images$Post_imagesBuilder.class"
-      },
-      {
-        "pattern": "sungshin/sooon/model/Post_images.class"
-      },
-      {
-        "pattern": "sungshin/sooon/model/Post_like$Post_likeBuilder.class"
-      },
-      {
-        "pattern": "sungshin/sooon/model/Post_like.class"
       },
       {
         "pattern": "sungshin/sooon/model/RefreshToken$RefreshTokenBuilder.class"
@@ -1394,25 +1367,10 @@
         "pattern": "sungshin/sooon/repository/AccountRepository.class"
       },
       {
-        "pattern": "sungshin/sooon/repository/PostCommentRepository.class"
-      },
-      {
-        "pattern": "sungshin/sooon/repository/PostImagesRepository.class"
-      },
-      {
-        "pattern": "sungshin/sooon/repository/PostLikeRepository.class"
-      },
-      {
-        "pattern": "sungshin/sooon/repository/PostRepository.class"
-      },
-      {
         "pattern": "sungshin/sooon/repository/RefreshTokenRepository.class"
       },
       {
         "pattern": "sungshin/sooon/service/AccountService.class"
-      },
-      {
-        "pattern": "sungshin/sooon/service/PostService.class"
       }
     ]
   },

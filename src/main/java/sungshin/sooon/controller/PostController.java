@@ -7,12 +7,10 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import sungshin.sooon.dto.PostCommentRequestDto;
-import sungshin.sooon.dto.PostRequestDto;
-import sungshin.sooon.dto.PostResponseDto;
-import sungshin.sooon.model.Account;
-import sungshin.sooon.model.CurrentUser;
-import sungshin.sooon.repository.PostRepository;
+import sungshin.sooon.dto.*;
+import sungshin.sooon.domain.account.Account;
+import sungshin.sooon.domain.account.CurrentUser;
+import sungshin.sooon.domain.post.PostRepository;
 import sungshin.sooon.service.PostService;
 
 import javax.validation.Valid;

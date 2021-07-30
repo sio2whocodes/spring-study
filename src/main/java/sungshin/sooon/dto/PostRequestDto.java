@@ -1,9 +1,7 @@
 package sungshin.sooon.dto;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import sungshin.sooon.model.Post;
+import lombok.*;
+import sungshin.sooon.domain.post.Post;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -11,6 +9,8 @@ import java.time.LocalDateTime;
 
 @Getter @Setter
 @NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class PostRequestDto {
     @NotBlank
     private String title;

@@ -194,12 +194,6 @@
     "name": "java.io.Serializable[]"
   },
   {
-    "name": "java.lang.Boolean",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
     "name": "java.lang.CharSequence[]"
   },
   {
@@ -591,12 +585,6 @@
   },
   {
     "name": "javax.servlet.http.HttpServletRequestWrapper",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "javax.servlet.http.HttpSession",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true
@@ -6624,33 +6612,7 @@
     "allDeclaredClasses": true
   },
   {
-    "name": "sungshin.sooon.controller.PostController",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allPublicMethods": true,
-    "allDeclaredClasses": true
-  },
-  {
     "name": "sungshin.sooon.dto.LoginRequest",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "sungshin.sooon.dto.PostCreateRequestDto",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "sungshin.sooon.dto.PostResponseDto",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "sungshin.sooon.dto.PostUpdateRequestDto",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true
@@ -6671,66 +6633,6 @@
   },
   {
     "name": "sungshin.sooon.model.Account$AccountBuilder",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allDeclaredClasses": true
-  },
-  {
-    "name": "sungshin.sooon.model.Post",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allPublicMethods": true,
-    "allDeclaredClasses": true
-  },
-  {
-    "name": "sungshin.sooon.model.Post$PostBuilder",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allDeclaredClasses": true
-  },
-  {
-    "name": "sungshin.sooon.model.Post_comment",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allPublicMethods": true,
-    "allDeclaredClasses": true
-  },
-  {
-    "name": "sungshin.sooon.model.Post_comment$Post_commentBuilder",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allDeclaredClasses": true
-  },
-  {
-    "name": "sungshin.sooon.model.Post_images",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allPublicMethods": true,
-    "allDeclaredClasses": true
-  },
-  {
-    "name": "sungshin.sooon.model.Post_images$Post_imagesBuilder",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allDeclaredClasses": true
-  },
-  {
-    "name": "sungshin.sooon.model.Post_like",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allPublicMethods": true,
-    "allDeclaredClasses": true
-  },
-  {
-    "name": "sungshin.sooon.model.Post_like$Post_likeBuilder",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true,
@@ -6760,38 +6662,6 @@
     "allDeclaredClasses": true
   },
   {
-    "name": "sungshin.sooon.repository.PostCommentRepository",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allPublicMethods": true,
-    "allDeclaredClasses": true
-  },
-  {
-    "name": "sungshin.sooon.repository.PostImagesRepository",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allPublicMethods": true,
-    "allDeclaredClasses": true
-  },
-  {
-    "name": "sungshin.sooon.repository.PostLikeRepository",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allPublicMethods": true,
-    "allDeclaredClasses": true
-  },
-  {
-    "name": "sungshin.sooon.repository.PostRepository",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allPublicMethods": true,
-    "allDeclaredClasses": true
-  },
-  {
     "name": "sungshin.sooon.repository.RefreshTokenRepository",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
@@ -6801,14 +6671,6 @@
   },
   {
     "name": "sungshin.sooon.service.AccountService",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allPublicMethods": true,
-    "allDeclaredClasses": true
-  },
-  {
-    "name": "sungshin.sooon.service.PostService",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true,

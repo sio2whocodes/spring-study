@@ -2,7 +2,7 @@ package sungshin.sooon.dto;
 
 import lombok.Builder;
 import lombok.Data;
-import sungshin.sooon.model.PostComment;
+import sungshin.sooon.domain.post.PostComment;
 
 import java.time.LocalDateTime;
 
@@ -26,7 +26,7 @@ public class PostCommentResponseDto {
                 .isAnonymous(comment.getIsAnonymous())
                 .createdAt(comment.getCreatedAt())
                 .postId(comment.getPost().getId())
-                .accountId(comment.getAccount().getAccount_id())
+                .accountId(comment.getAccount().getId())
                 .build();
     }
 }

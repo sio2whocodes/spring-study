@@ -2,7 +2,7 @@ package sungshin.sooon.dto;
 
 import lombok.Builder;
 import lombok.Data;
-import sungshin.sooon.model.Account;
+import sungshin.sooon.domain.account.Account;
 
 @Data
 @Builder
@@ -18,7 +18,7 @@ public class AccountResponseDto {
 
     public static AccountResponseDto of(Account account){
         return AccountResponseDto.builder()
-                .id(account.getAccount_id())
+                .id(account.getId())
                 .nickname(account.getNickname())
                 .email(account.getEmail())
                 .build();
