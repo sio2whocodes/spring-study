@@ -2,12 +2,16 @@ package sungshin.sooon.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.web.bind.annotation.*;
-import sungshin.sooon.dto.LoginRequest;
+import sungshin.sooon.dto.LoginRequestDto;
+import sungshin.sooon.dto.RegisterRequestDto;
 import sungshin.sooon.dto.TokenDto;
-import sungshin.sooon.model.Account;
-import sungshin.sooon.model.CurrentUser;
 import sungshin.sooon.service.AccountService;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @RestController
 @RequiredArgsConstructor
@@ -18,8 +22,33 @@ public class AccountController {
 
     // 로그인
     @PostMapping("/login")
-    public ResponseEntity<TokenDto> login(@RequestBody LoginRequest loginRequest) {
-        return ResponseEntity.ok(accountService.login(loginRequest));
+    public ResponseEntity<TokenDto> login(@RequestBody LoginRequestDto dto) {
+        return ResponseEntity.ok(accountService.login(dto));
     }
 
+    //로그아웃
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request, HttpServletResponse response) {
+        new SecurityContextLogoutHandler().logout(request,response, SecurityContextHolder.getContext().getAuthentication());
+        return "redirect:/login";
+    }
+
+    //회원가입
+    @PostMapping("/register")
+    public void register(@RequestBody RegisterRequestDto registerRequestDto) {
+        accountService.register(registerRequestDto);
+    }
+
+
+    //이메일 중복확인
+    @GetMapping("/checkEmail")
+    public ResponseEntity<Boolean> checkEmail(@RequestParam(value = "email", defaultValue = "", required = false) String email) {
+        return ResponseEntity.ok(accountService.checkEmail(email));
+    }
+
+    //이메일 중복확인
+    @GetMapping("/checkNickname")
+    public ResponseEntity<Boolean> checkNickname(@RequestParam(value = "nickname", defaultValue = "", required = false) String nickname) {
+        return ResponseEntity.ok(accountService.checkNickname(nickname));
+    }
 }
